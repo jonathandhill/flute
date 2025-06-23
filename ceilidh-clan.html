@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ceilidh Clan - Sandrine Jones</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <a href="index.html">Sandrine Jones</a>
+        </div>
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="index.html#home" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="index.html#bio" class="nav-link">Bio</a>
+          </li>
+          <li class="nav-item">
+            <a href="index.html#education" class="nav-link">Teaching</a>
+          </li>
+          <li class="nav-item">
+            <a href="index.html#performances" class="nav-link">Ensembles</a>
+          </li>
+          <li class="nav-item">
+            <a href="index.html#media" class="nav-link">Media</a>
+          </li>
+          <li class="nav-item">
+            <a href="index.html#contact" class="nav-link">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a href="ceilidh-clan.html" class="nav-link active">Ceilidh Clan</a>
+          </li>
+        </ul>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero group-hero">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1 class="hero-title">Ceilidh Clan</h1>
+          <p class="hero-subtitle">Traditional • Folk • Celtic</p>
+          <p class="hero-description">
+            Experience the magic of traditional Celtic music through our vibrant
+            ceilidh band, bringing joy and dance to celebrations.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Calendar Section -->
+    <section class="calendar">
+      <div class="container">
+        <h2 class="section-title">Upcoming Performances</h2>
+        <div class="calendar-grid">
+          <div class="calendar-item">
+            <div class="calendar-date">
+              <span class="month">DEC</span>
+              <span class="day">20</span>
+            </div>
+            <div class="calendar-content">
+              <h3>Holiday Chamber Concert</h3>
+              <p class="venue">St. Patrick's Cathedral, NYC</p>
+              <p class="time">7:00 PM</p>
+              <p>
+                Featuring works by Bach, Handel, and contemporary holiday
+                arrangements
+              </p>
+              <a href="#" class="btn btn-small">Get Tickets</a>
+            </div>
+          </div>
+          <div class="calendar-item">
+            <div class="calendar-date">
+              <span class="month">JAN</span>
+              <span class="day">15</span>
+            </div>
+            <div class="calendar-content">
+              <h3>New Year Chamber Series</h3>
+              <p class="venue">Merkin Concert Hall</p>
+              <p class="time">8:00 PM</p>
+              <p>
+                Mozart String Quartet No. 19 "Dissonance" with flute quartet
+              </p>
+              <a href="#" class="btn btn-small">Get Tickets</a>
+            </div>
+          </div>
+          <div class="calendar-item">
+            <div class="calendar-date">
+              <span class="month">FEB</span>
+              <span class="day">8</span>
+            </div>
+            <div class="calendar-content">
+              <h3>Valentine's Chamber Music</h3>
+              <p class="venue">Carnegie Hall (Weill Recital Hall)</p>
+              <p class="time">6:30 PM</p>
+              <p>Romantic works by Brahms, Schumann, and Debussy</p>
+              <a href="#" class="btn btn-small">Get Tickets</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Setlists Section -->
+    <section class="setlists">
+      <div class="container">
+        <h2 class="section-title">Recent Setlists</h2>
+        <div class="setlist-tabs">
+          <button class="tab-btn active" data-tab="chamber">
+            Chamber Music
+          </button>
+          <button class="tab-btn" data-tab="orchestral">Orchestral</button>
+          <button class="tab-btn" data-tab="contemporary">Contemporary</button>
+        </div>
+
+        <div class="tab-content active" id="chamber">
+          <div class="setlist">
+            <h3>Autumn Chamber Series - November 2024</h3>
+            <div class="setlist-items">
+              <div class="setlist-item">
+                <span class="composer">Mozart</span>
+                <span class="piece">Flute Quartet in D Major, K. 285</span>
+                <span class="movement">I. Allegro</span>
+              </div>
+              <div class="setlist-item">
+                <span class="composer">Brahms</span>
+                <span class="piece">Clarinet Quintet in B minor, Op. 115</span>
+                <span class="movement">I. Allegro</span>
+              </div>
+              <div class="setlist-item">
+                <span class="composer">Debussy</span>
+                <span class="piece">String Quartet in G minor, Op. 10</span>
+                <span class="movement">I. Animé et très décidé</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-content" id="orchestral">
+          <div class="setlist">
+            <h3>Fall Symphony Series - October 2024</h3>
+            <div class="setlist-items">
+              <div class="setlist-item">
+                <span class="composer">Beethoven</span>
+                <span class="piece">Symphony No. 6 "Pastoral"</span>
+                <span class="movement">I. Allegro ma non troppo</span>
+              </div>
+              <div class="setlist-item">
+                <span class="composer">Mendelssohn</span>
+                <span class="piece">Symphony No. 4 "Italian"</span>
+                <span class="movement">I. Allegro vivace</span>
+              </div>
+              <div class="setlist-item">
+                <span class="composer">Dvořák</span>
+                <span class="piece">Symphony No. 9 "From the New World"</span>
+                <span class="movement">II. Largo</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-content" id="contemporary">
+          <div class="setlist">
+            <h3>New Music Festival - September 2024</h3>
+            <div class="setlist-items">
+              <div class="setlist-item">
+                <span class="composer">John Adams</span>
+                <span class="piece">Shaker Loops</span>
+                <span class="movement">Version for String Septet</span>
+              </div>
+              <div class="setlist-item">
+                <span class="composer">Philip Glass</span>
+                <span class="piece">String Quartet No. 3 "Mishima"</span>
+                <span class="movement">I. 1957 - Award Montage</span>
+              </div>
+              <div class="setlist-item">
+                <span class="composer">Caroline Shaw</span>
+                <span class="piece">Entr'acte</span>
+                <span class="movement">For String Quartet</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Member Profiles Section -->
+    <section class="members">
+      <div class="container">
+        <h2 class="section-title">Ensemble Members</h2>
+        <div class="members-grid">
+          <div class="member-card">
+            <div class="member-image">
+              <img src="sandrineceildih.png" alt="Sandrine and her flute" />
+            </div>
+            <div class="member-info">
+              <h3>Sandrine Jones</h3>
+              <p class="instrument">Flute</p>
+              <p class="bio">
+                Principal flutist and ensemble founder. Known for expressive
+                playing and innovative programming.
+              </p>
+              <div class="member-social">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="member-card">
+            <div class="member-image">
+              <img src="jonathan2.png" alt="Jonathan playing guitar" />
+            </div>
+            <div class="member-info">
+              <h3>Jonathan</h3>
+              <p class="instrument">Guitar & Vocals</p>
+              <p class="bio">
+                Provides rhythmic drive and heartfelt vocals, blending
+                traditional and contemporary folk styles.
+              </p>
+              <div class="member-social">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Group Videos Section -->
+    <section class="group-videos">
+      <div class="container">
+        <h2 class="section-title">Performance Videos</h2>
+        <div class="videos-grid">
+          <div class="video-card">
+            <div class="video-placeholder">
+              <i class="fas fa-play-circle"></i>
+              <p>Mozart Flute Quartet</p>
+            </div>
+            <div class="video-info">
+              <h3>Mozart: Flute Quartet in D Major</h3>
+              <p>Live performance at Lincoln Center</p>
+              <span class="video-date">November 2024</span>
+            </div>
+          </div>
+          <div class="video-card">
+            <div class="video-placeholder">
+              <i class="fas fa-play-circle"></i>
+              <p>Brahms Clarinet Quintet</p>
+            </div>
+            <div class="video-info">
+              <h3>Brahms: Clarinet Quintet in B minor</h3>
+              <p>Chamber music series performance</p>
+              <span class="video-date">October 2024</span>
+            </div>
+          </div>
+          <div class="video-card">
+            <div class="video-placeholder">
+              <i class="fas fa-play-circle"></i>
+              <p>Debussy String Quartet</p>
+            </div>
+            <div class="video-info">
+              <h3>Debussy: String Quartet in G minor</h3>
+              <p>Impressionist chamber music</p>
+              <span class="video-date">September 2024</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section class="booking">
+      <div class="container">
+        <h2 class="section-title">Book the Ensemble</h2>
+        <div class="booking-content">
+          <div class="booking-info">
+            <h3>Available for Events</h3>
+            <ul class="booking-list">
+              <li><i class="fas fa-check"></i> Weddings and Ceremonies</li>
+              <li><i class="fas fa-check"></i> Corporate Events</li>
+              <li><i class="fas fa-check"></i> Private Parties</li>
+              <li><i class="fas fa-check"></i> Educational Programs</li>
+              <li><i class="fas fa-check"></i> Concert Series</li>
+            </ul>
+            <p>
+              Contact us to discuss your event requirements and available
+              repertoire.
+            </p>
+          </div>
+          <div class="booking-form">
+            <form>
+              <div class="form-group">
+                <input type="text" placeholder="Event Type" required />
+              </div>
+              <div class="form-group">
+                <input type="date" placeholder="Event Date" required />
+              </div>
+              <div class="form-group">
+                <input type="text" placeholder="Venue/Location" required />
+              </div>
+              <div class="form-group">
+                <textarea
+                  placeholder="Event Details & Requirements"
+                  rows="4"
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">
+                Request Booking
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2024 Sandrine Jones. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

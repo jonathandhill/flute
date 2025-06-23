@@ -186,7 +186,7 @@ h6 {
   position: relative;
   overflow: hidden;
   background: linear-gradient(rgba(44, 62, 80, 0.6), rgba(44, 62, 80, 0.6)),
-    url('hero-background.jpg');
+    url('images/hero-background.jpg');
   background-size: cover;
   background-position: 75% 0;
   background-repeat: no-repeat;
@@ -266,7 +266,7 @@ h6 {
 
 /* Group Hero */
 .group-hero {
-  background: url('ceilidh-background.jpg');
+  background: url('images/ceilidh-background.jpg');
 }
 
 .group-hero .hero-content {

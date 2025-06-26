@@ -371,16 +371,34 @@
             </div>
           </div>
           <div class="contact-form">
-            <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
-              <input type="hidden" name="access_key" value="d0e3a13d-3305-415d-8ea6-9addde679c18">
+            <form
+              id="contact-form"
+              action="https://api.web3forms.com/submit"
+              method="POST"
+            >
+              <input
+                type="hidden"
+                name="access_key"
+                value="d0e3a13d-3305-415d-8ea6-9addde679c18"
+              />
               <div class="form-group">
-                <input type="text" placeholder="Your Name" required name="name"/>
+                <input
+                  type="text"
+                  placeholder="Your Name"
+                  required
+                  name="name"
+                />
               </div>
               <div class="form-group">
-                <input type="email" placeholder="Your Email" required name="email"/>
+                <input
+                  type="email"
+                  placeholder="Your Email"
+                  required
+                  name="email"
+                />
               </div>
               <div class="form-group">
-                <input type="text" placeholder="Subject" name="subject"/>
+                <input type="text" placeholder="Subject" name="subject" />
               </div>
               <div class="form-group">
                 <textarea
@@ -390,7 +408,12 @@
                   name="message"
                 ></textarea>
               </div>
-              <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+              <input
+                type="checkbox"
+                name="botcheck"
+                class="hidden"
+                style="display: none"
+              />
               <button type="submit" class="btn btn-primary">
                 Send Message
               </button>

@@ -10,7 +10,7 @@ html {
 }
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: Inter, sans-serif;
   line-height: 1.6;
   color: #333;
   overflow-x: hidden;
@@ -74,7 +74,7 @@ h6 {
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(52, 152, 219, 0.3);
+  box-shadow: 0 8px 25px rgb(52 152 219 / 30%);
 }
 
 .btn-secondary {
@@ -99,11 +99,11 @@ h6 {
   position: fixed;
   top: 0;
   width: 100%;
-  background: rgba(255, 255, 255, 0.95);
+  background: rgb(255 255 255 / 95%);
   backdrop-filter: blur(10px);
   z-index: 1000;
   transition: all 0.3s ease;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgb(0 0 0 / 10%);
 }
 
 .nav-container {
@@ -114,6 +114,17 @@ h6 {
   justify-content: space-between;
   align-items: center;
   height: 70px;
+}
+
+.scroll-indicator a {
+  color: white;
+  font-size: 1.5rem;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.scroll-indicator a:hover {
+  opacity: 1;
 }
 
 .nav-logo a {
@@ -127,6 +138,7 @@ h6 {
 .nav-logo a:hover {
   color: #3498db;
 }
+
 
 .nav-menu {
   display: flex;
@@ -185,7 +197,8 @@ h6 {
   color: white;
   position: relative;
   overflow: hidden;
-  background: linear-gradient(rgba(44, 62, 80, 0.6), rgba(44, 62, 80, 0.6)),
+  background:
+    linear-gradient(rgb(44 62 80 / 60%), rgb(44 62 80 / 60%)),
     url('images/hero-background.jpg');
   background-size: cover;
   background-position: 75% 0;
@@ -217,14 +230,14 @@ h6 {
   font-size: 3.5rem;
   font-weight: 700;
   margin-bottom: 1rem;
-  animation: fadeInUp 1s ease;
+  animation: fade-in-up 1s ease;
 }
 
 .hero-subtitle {
   font-size: 1.2rem;
   margin-bottom: 1.5rem;
   opacity: 0.9;
-  animation: fadeInUp 1s ease 0.2s both;
+  animation: fade-in-up 1s ease 0.2s both;
 }
 
 .hero-description {
@@ -232,13 +245,13 @@ h6 {
   margin-bottom: 2rem;
   line-height: 1.8;
   opacity: 0.8;
-  animation: fadeInUp 1s ease 0.4s both;
+  animation: fade-in-up 1s ease 0.4s both;
 }
 
 .hero-buttons {
   display: flex;
   gap: 1rem;
-  animation: fadeInUp 1s ease 0.6s both;
+  animation: fade-in-up 1s ease 0.6s both;
 }
 
 .hero-image {
@@ -251,17 +264,6 @@ h6 {
   left: 50%;
   transform: translateX(-50%);
   animation: bounce 2s infinite;
-}
-
-.scroll-indicator a {
-  color: white;
-  font-size: 1.5rem;
-  opacity: 0.7;
-  transition: opacity 0.3s ease;
-}
-
-.scroll-indicator a:hover {
-  opacity: 1;
 }
 
 /* Group Hero */
@@ -303,6 +305,9 @@ h6 {
 .bio {
   padding: 100px 0;
   background: #f8f9fa;
+  color: #666;
+  margin-bottom: 1rem;
+  line-height: 1.6;
 }
 
 .bio-content {
@@ -335,14 +340,16 @@ h6 {
   background: white;
   padding: 2rem;
   border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 30px rgb(0 0 0 / 10%);
   text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .education-item:hover {
   transform: translateY(-5px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 20px 40px rgb(0 0 0 / 15%);
 }
 
 .education-icon {
@@ -392,13 +399,15 @@ h6 {
   background: white;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 10px 30px rgb(0 0 0 / 10%);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .performance-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 20px 40px rgb(0 0 0 / 15%);
 }
 
 .performance-image {
@@ -466,7 +475,7 @@ h6 {
 
 .tab-content.active {
   display: block;
-  animation: fadeIn 0.5s ease;
+  animation: fade-in 0.5s ease;
 }
 
 .media-grid {
@@ -479,7 +488,7 @@ h6 {
   background: white;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 30px rgb(0 0 0 / 10%);
   transition: transform 0.3s ease;
 }
 
@@ -499,6 +508,11 @@ h6 {
   cursor: pointer;
 }
 
+.recording-placeholder i {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
 .video-placeholder i {
   font-size: 3rem;
   margin-bottom: 1rem;
@@ -516,10 +530,6 @@ h6 {
   color: white;
 }
 
-.recording-placeholder i {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
 
 .recording-placeholder h4 {
   margin-bottom: 0.5rem;
@@ -580,7 +590,7 @@ h6 {
 
 .social-link:hover {
   transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(52, 152, 219, 0.3);
+  box-shadow: 0 10px 20px rgb(52 152 219 / 30%);
 }
 
 .form-group {
@@ -620,7 +630,7 @@ h6 {
   background: white;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 30px rgb(0 0 0 / 10%);
   transition: transform 0.3s ease;
 }
 
@@ -688,7 +698,7 @@ h6 {
   background: white;
   border-radius: 12px;
   padding: 2rem;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 30px rgb(0 0 0 / 10%);
 }
 
 .setlist h3 {
@@ -744,7 +754,7 @@ h6 {
   background: white;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 30px rgb(0 0 0 / 10%);
   transition: transform 0.3s ease;
 }
 
@@ -783,12 +793,6 @@ h6 {
   margin-bottom: 1rem;
 }
 
-.bio {
-  color: #666;
-  margin-bottom: 1rem;
-  line-height: 1.6;
-}
-
 .member-social {
   display: flex;
   gap: 0.5rem;
@@ -809,7 +813,7 @@ h6 {
 
 .member-social a:hover {
   transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+  box-shadow: 0 5px 15px rgb(52 152 219 / 30%);
 }
 
 /* Group Videos Section */
@@ -828,7 +832,7 @@ h6 {
   background: white;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 30px rgb(0 0 0 / 10%);
   transition: transform 0.3s ease;
 }
 
@@ -900,32 +904,35 @@ h6 {
 }
 
 /* Animations */
-@keyframes fadeInUp {
+@keyframes fade-in-up {
   from {
     opacity: 0;
     transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
-@keyframes fadeInRight {
+@keyframes fade-in-right {
   from {
     opacity: 0;
     transform: translateX(30px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
   }
 }
 
-@keyframes fadeIn {
+@keyframes fade-in {
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -939,16 +946,18 @@ h6 {
   100% {
     transform: translateX(-50%) translateY(0);
   }
+
   40% {
     transform: translateX(-50%) translateY(-10px);
   }
+
   60% {
     transform: translateX(-50%) translateY(-5px);
   }
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (width <= 768px) {
   .hamburger {
     display: flex;
   }
@@ -962,7 +971,7 @@ h6 {
     width: 100%;
     text-align: center;
     transition: 0.3s;
-    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 10px 27px rgb(0 0 0 / 5%);
     padding: 2rem 0;
   }
 
@@ -1030,7 +1039,7 @@ h6 {
   }
 }
 
-@media (max-width: 480px) {
+@media (width <= 480px) {
   .container {
     padding: 0 15px;
   }

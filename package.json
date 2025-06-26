@@ -1,0 +1,40 @@
+{
+  "name": "flute",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "npm run lint:js && npm run lint:css && npm run lint:html",
+    "lint:js": "eslint script.js",
+    "lint:css": "stylelint styles.css",
+    "lint:html": "htmlhint *.html",
+    "lint:fix": "npm run lint:js:fix && npm run lint:css:fix",
+    "lint:js:fix": "eslint script.js --fix",
+    "lint:css:fix": "stylelint styles.css --fix",
+    "format": "prettier --write \"**/*.{js,css,html,json,md}\"",
+    "format:check": "prettier --check \"**/*.{js,css,html,json,md}\"",
+    "check": "npm run lint && npm run format:check"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jonathandhill/flute.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/jonathandhill/flute/issues"
+  },
+  "homepage": "https://github.com/jonathandhill/flute#readme",
+  "devDependencies": {
+    "@eslint/js": "^9.29.0",
+    "eslint": "^9.29.0",
+    "globals": "^16.2.0",
+    "htmlhint": "^1.6.3",
+    "prettier": "^3.6.1",
+    "stylelint": "^16.21.0",
+    "stylelint-config-standard": "^38.0.0"
+  }
+}

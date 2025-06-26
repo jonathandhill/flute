@@ -29,7 +29,7 @@ function initNavigation() {
 
   window.addEventListener('scroll', function () {
     let current = '';
-    sections.forEach((section) => {
+    sections.forEach(section => {
       const sectionTop = section.offsetTop;
       const sectionHeight = section.clientHeight;
       if (window.scrollY >= sectionTop - 200) {
@@ -37,7 +37,7 @@ function initNavigation() {
       }
     });
 
-    navLinks.forEach((link) => {
+    navLinks.forEach(link => {
       link.classList.remove('active');
       if (
         link.getAttribute('href') === `#${current}` ||
@@ -53,7 +53,7 @@ function initNavigation() {
 function initSmoothScrolling() {
   const links = document.querySelectorAll('a[href^="#"]');
 
-  links.forEach((link) => {
+  links.forEach(link => {
     link.addEventListener('click', function (e) {
       e.preventDefault();
 
@@ -86,7 +86,7 @@ function initMobileMenu() {
   }
 
   // Close mobile menu when clicking on a link
-  navLinks.forEach((link) => {
+  navLinks.forEach(link => {
     link.addEventListener('click', function () {
       hamburger.classList.remove('active');
       navMenu.classList.remove('active');
@@ -106,17 +106,17 @@ function initMobileMenu() {
 function initTabSwitching() {
   const tabButtons = document.querySelectorAll('.tab-btn');
 
-  tabButtons.forEach((button) => {
+  tabButtons.forEach(button => {
     button.addEventListener('click', function () {
       const tabName = this.getAttribute('data-tab');
       const tabContent = document.getElementById(tabName);
       const tabContainer = this.closest('.media, .setlists');
 
       // Remove active class from all buttons and content
-      tabContainer.querySelectorAll('.tab-btn').forEach((btn) => {
+      tabContainer.querySelectorAll('.tab-btn').forEach(btn => {
         btn.classList.remove('active');
       });
-      tabContainer.querySelectorAll('.tab-content').forEach((content) => {
+      tabContainer.querySelectorAll('.tab-content').forEach(content => {
         content.classList.remove('active');
       });
 
@@ -131,30 +131,38 @@ function initTabSwitching() {
 
 // Form handling
 function initFormHandling() {
-  const forms = document.querySelectorAll('form');
+  const contactForm = document.getElementById('contact-form');
 
-  forms.forEach((form) => {
-    form.addEventListener('submit', function (e) {
+  if (contactForm) {
+    contactForm.addEventListener('submit', async function (e) {
       e.preventDefault();
 
-      // Get form data
-      const formData = new FormData(this);
-      const formObject = {};
+      const formData = new FormData(contactForm);
 
-      formData.forEach((value, key) => {
-        formObject[key] = value;
-      });
+      try {
+        const response = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          body: formData,
+        });
+        const result = await response.json();
 
-      // Simulate form submission
-      showNotification(
-        'Thank you! Your message has been sent successfully.',
-        'success'
-      );
-
-      // Reset form
-      this.reset();
+        if (result.success) {
+          showNotification(
+            'Thank you! Your message has been sent successfully.',
+            'success'
+          );
+          contactForm.reset();
+        } else {
+          showNotification(
+            'Oops! Something went wrong. Please try again.',
+            'error'
+          );
+        }
+      } catch (error) {
+        showNotification('Network error. Please try again later.', 'error');
+      }
     });
-  });
+  }
 }
 
 // Scroll effects and animations
@@ -166,7 +174,7 @@ function initScrollEffects() {
   };
 
   const observer = new IntersectionObserver(function (entries) {
-    entries.forEach((entry) => {
+    entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('animate-in');
       }
@@ -177,7 +185,7 @@ function initScrollEffects() {
   const animateElements = document.querySelectorAll(
     '.education-item, .performance-card, .media-item, .member-card, .calendar-item, .video-card'
   );
-  animateElements.forEach((el) => {
+  animateElements.forEach(el => {
     observer.observe(el);
   });
 
@@ -287,7 +295,7 @@ function showNotification(message, type = 'success') {
 function initVideoHandlers() {
   const videoPlaceholders = document.querySelectorAll('.video-placeholder');
 
-  videoPlaceholders.forEach((placeholder) => {
+  videoPlaceholders.forEach(placeholder => {
     placeholder.addEventListener('click', function () {
       const videoTitle = this.querySelector('p')?.textContent || 'Video';
       showNotification(`Playing: ${videoTitle}`, 'success');
@@ -299,7 +307,7 @@ function initVideoHandlers() {
 function initImageGallery() {
   const imagePlaceholders = document.querySelectorAll('.image-placeholder');
 
-  imagePlaceholders.forEach((placeholder) => {
+  imagePlaceholders.forEach(placeholder => {
     placeholder.addEventListener('click', function () {
       const imageTitle = this.querySelector('p')?.textContent || 'Image';
       showNotification(`Viewing: ${imageTitle}`, 'success');
@@ -311,7 +319,7 @@ function initImageGallery() {
 function initPerformanceCards() {
   const performanceCards = document.querySelectorAll('.performance-card');
 
-  performanceCards.forEach((card) => {
+  performanceCards.forEach(card => {
     card.addEventListener('click', function () {
       const title = this.querySelector('h3')?.textContent || 'Performance';
       showNotification(`Viewing details for: ${title}`, 'success');
@@ -323,7 +331,7 @@ function initPerformanceCards() {
 function initCalendarItems() {
   const calendarItems = document.querySelectorAll('.calendar-item');
 
-  calendarItems.forEach((item) => {
+  calendarItems.forEach(item => {
     const ticketBtn = item.querySelector('.btn-small');
     if (ticketBtn) {
       ticketBtn.addEventListener('click', function (e) {
@@ -342,10 +350,10 @@ function initCalendarItems() {
 function initMemberCards() {
   const memberCards = document.querySelectorAll('.member-card');
 
-  memberCards.forEach((card) => {
+  memberCards.forEach(card => {
     const socialLinks = card.querySelectorAll('.member-social a');
 
-    socialLinks.forEach((link) => {
+    socialLinks.forEach(link => {
       link.addEventListener('click', function (e) {
         e.stopPropagation();
         const memberName = card.querySelector('h3')?.textContent || 'Member';

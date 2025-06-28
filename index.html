@@ -32,7 +32,7 @@
             <a href="#education" class="nav-link">Teaching</a>
           </li>
           <li class="nav-item">
-            <a href="#performances" class="nav-link">Ensembles</a>
+            <a href="#ensembles" class="nav-link">Ensembles</a>
           </li>
           <li class="nav-item">
             <a href="#media" class="nav-link">Media</a>
@@ -41,7 +41,7 @@
             <a href="#contact" class="nav-link">Contact</a>
           </li>
           <li class="nav-item">
-            <a href="ceilidh-clan.html" class="nav-link">Ceilidh Clan</a>
+            <a href="ceilidh-clan.html" class="nav-link">Ceilidh Workshop</a>
           </li>
         </ul>
         <div class="hamburger">
@@ -63,7 +63,7 @@
             innovative interpretations of timeless compositions.
           </p>
           <div class="hero-buttons">
-            <a href="#performances" class="btn btn-primary">View Ensembles</a>
+            <a href="#ensembles" class="btn btn-primary">View Ensembles</a>
             <a href="#media" class="btn btn-secondary">Listen Now</a>
           </div>
         </div>
@@ -99,11 +99,8 @@
               the Performing Arts.
             </p>
           </div>
-          <div class="bio-image">
-            <div class="image-placeholder">
-              <i class="fas fa-user"></i>
-              <p>Bio Photo</p>
-            </div>
+          <div class="bio-image-container">
+            <img src="images/redskirtportrait.jpg" alt="Sandrine Jones" />
           </div>
         </div>
       </div>
@@ -169,20 +166,18 @@
     </section>
 
     <!-- Ensembles Section -->
-    <section id="performances" class="performances">
+    <section id="ensembles" class="ensembles">
       <div class="container">
         <h2 class="section-title">Ensembles</h2>
-        <div class="performances-grid">
-          <div class="performance-card">
-            <div class="performance-image">
-              <div class="image-placeholder">
-                <i class="fas fa-music"></i>
-              </div>
+        <div class="ensembles-grid">
+          <div class="ensemble-card">
+            <div class="ensemble-image">
+              <img src="images/sandrine-natalie.png" alt="Flute and Harp" />
             </div>
-            <div class="performance-content">
+            <div class="ensemble-content">
               <h3>Flute and Harp</h3>
-              <p class="performance-date">Chamber Duo</p>
-              <p class="performance-venue">Classical & Contemporary</p>
+              <p class="ensemble-type">Chamber Duo</p>
+              <p class="ensemble-style">Classical & Contemporary</p>
               <p>
                 Elegant performances featuring the beautiful combination of
                 flute and harp, performing both classical repertoire and
@@ -190,33 +185,46 @@
               </p>
             </div>
           </div>
-          <div class="performance-card">
-            <div class="performance-image">
-              <div class="image-placeholder">
-                <i class="fas fa-guitar"></i>
-              </div>
+          <div class="ensemble-card">
+            <div class="ensemble-image">
+              <img src="images/fluteguitar.png" alt="Flute and Guitar" />
             </div>
-            <div class="performance-content">
+            <div class="ensemble-content">
               <h3>Flute and Guitar</h3>
-              <p class="performance-date">Chamber Duo</p>
-              <p class="performance-venue">Versatile Repertoire</p>
+              <p class="ensemble-type">Chamber Duo</p>
+              <p class="ensemble-style">Classical & Contemporary</p>
               <p>
                 Dynamic duo performances combining the lyrical qualities of
                 flute with the rich textures of guitar, spanning classical to
-                modern compositions.
+                modern pop and folk compositions.
               </p>
             </div>
           </div>
-          <div class="performance-card">
-            <div class="performance-image">
-              <div class="image-placeholder">
-                <i class="fas fa-users"></i>
-              </div>
+          <div class="ensemble-card">
+            <div class="ensemble-image">
+              <img
+                src="images/jones-jonescoffeeboard.jpeg"
+                alt="Flute and piano"
+              />
             </div>
-            <div class="performance-content">
-              <h3>Flute Quartet</h3>
-              <p class="performance-date">Chamber Ensemble</p>
-              <p class="performance-venue">Four Flutes</p>
+            <div class="ensemble-content">
+              <h3>Flute and Piano</h3>
+              <p class="ensemble-type">Chamber Duo</p>
+              <p class="ensemble-style">Classical</p>
+              <p>
+                Elegant performances featuring the beautiful combination of
+                flute and piano, performing classical repertoire you love.
+              </p>
+            </div>
+          </div>
+          <div class="ensemble-card">
+            <div class="ensemble-image">
+              <img src="images/zephr.png" alt="Flute quartet" />
+            </div>
+            <div class="ensemble-content">
+              <h3>Zephyr Flutes</h3>
+              <p class="ensemble-type">Flute Quartet</p>
+              <p class="ensemble-style">Classical</p>
               <p>
                 Rich ensemble sound featuring four flutes, performing works
                 specifically composed for flute quartet as well as arrangements
@@ -225,7 +233,7 @@
             </div>
           </div>
         </div>
-        <div class="performances-cta">
+        <div class="ensembles-cta">
           <a href="ceilidh-clan.html" class="btn btn-primary"
             >View Ceilidh Clan</a
           >
@@ -239,7 +247,7 @@
         <h2 class="section-title">Media Gallery</h2>
         <div class="media-tabs">
           <button class="tab-btn active" data-tab="videos">Videos</button>
-          <button class="tab-btn" data-tab="photos">Photos</button>
+          <!-- <button class="tab-btn" data-tab="photos">Photos</button> -->
           <button class="tab-btn" data-tab="recordings">Recordings</button>
         </div>
 
@@ -267,16 +275,10 @@
                 allowfullscreen
               ></iframe>
             </div>
-            <div class="media-item video-item">
-              <div class="video-placeholder">
-                <i class="fas fa-play-circle"></i>
-                <p>Performance Video 3</p>
-              </div>
-            </div>
           </div>
         </div>
 
-        <div class="tab-content" id="photos">
+        <!-- <div class="tab-content" id="photos">
           <div class="media-grid">
             <div class="media-item photo-item">
               <div class="image-placeholder">
@@ -303,35 +305,36 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
 
         <div class="tab-content" id="recordings">
           <div class="media-grid">
             <div class="media-item recording-item">
-              <div class="recording-placeholder">
-                <i class="fas fa-headphones"></i>
-                <h4>Mozart Flute Concerto</h4>
-                <p>Allegro maestoso</p>
-              </div>
+              <iframe
+                width="100%"
+                height="200"
+                scrolling="no"
+                frameborder="no"
+                allow="autoplay"
+                src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/221183408&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+              ></iframe>
             </div>
             <div class="media-item recording-item">
-              <div class="recording-placeholder">
-                <i class="fas fa-headphones"></i>
-                <h4>Debussy Syrinx</h4>
-                <p>Solo flute piece</p>
-              </div>
-            </div>
-            <div class="media-item recording-item">
-              <div class="recording-placeholder">
-                <i class="fas fa-headphones"></i>
-                <h4>Bach Sonata in E minor</h4>
-                <p>Andante</p>
-              </div>
+              <iframe
+                width="100%"
+                height="200"
+                scrolling="no"
+                frameborder="no"
+                allow="autoplay"
+                src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/221180011&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+              ></iframe>
             </div>
           </div>
         </div>
       </div>
     </section>
+
+    
 
     <!-- Contact Section -->
     <section id="contact" class="contact">

@@ -189,6 +189,18 @@ h6 {
   transition: 0.3s;
 }
 
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
 /* Hero Section */
 .hero {
   min-height: 100vh;
@@ -199,7 +211,7 @@ h6 {
   overflow: hidden;
   background:
     linear-gradient(rgb(44 62 80 / 60%), rgb(44 62 80 / 60%)),
-    url('images/hero-background.jpg');
+    url('images/flute-hero.jpg');
   background-size: cover;
   background-position: 75% 0;
   background-repeat: no-repeat;
@@ -214,7 +226,7 @@ h6 {
   margin: 0 auto;
   padding: 0 20px;
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 4rem;
   align-items: center;
   position: relative;
@@ -255,7 +267,20 @@ h6 {
 }
 
 .hero-image {
-  display: none;
+  display: block;
+  width: 80%;
+  height: 100%;
+  min-height: 500px;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: right;
 }
 
 .scroll-indicator {
@@ -966,19 +991,30 @@ h6 {
 /* Responsive Design */
 @media (width <= 768px) {
   .hamburger {
-    display: none;
+    display: flex;
+  }
+
+  .nav-container {
+    height: 70px;
+    flex-direction: row;
+    justify-content: space-between;
   }
 
   .nav-menu {
-    position: static;
-    flex-direction: row;
-    background-color: transparent;
-    width: auto;
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    flex-direction: column;
+    background-color: white;
+    width: 100%;
     text-align: center;
-    transition: none;
-    box-shadow: none;
-    padding: 0;
-    margin-top: 1rem;
+    transition: 0.3s;
+    box-shadow: 0 10px 27px rgb(0 0 0 / 5%);
+    padding: 2rem 0;
+  }
+
+  .nav-menu.active {
+    left: 0;
   }
 
   .nav-menu.active {
@@ -989,6 +1025,11 @@ h6 {
     grid-template-columns: 1fr;
     text-align: center;
     gap: 2rem;
+  }
+
+  .hero-image {
+    min-height: 300px;
+    order: -1;
   }
 
   .hero-title {
